@@ -3,11 +3,7 @@ from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-STATIC_URL = '/static/'
-STATICFILES_DIRS = [
-     BASE_DIR / "static",
-    os.path.join(BASE_DIR, 'book/static'),
-]
+
 # MEDIA_URL = '/media/'
 # MEDIA_ROOT = os.path.join(BASE_DIR,'media')
 
@@ -22,6 +18,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'book',
     'tailwind',
     'theme',
 ]
@@ -63,6 +60,7 @@ DATABASES = {
     }
 }
 
+
 AUTH_PASSWORD_VALIDATORS = [
     {
         'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
@@ -84,7 +82,10 @@ USE_I18N = True
 USE_TZ = True
 
 STATIC_URL = '/static/'
-STATICFILES_DIRS = [BASE_DIR / 'static']
+STATICFILES_DIRS = [
+     BASE_DIR / "static",
+    os.path.join(BASE_DIR, 'book/static'),
+]
 
 # Ensure the 'static' directory exists
 if not os.path.exists(BASE_DIR / 'static'):
@@ -97,3 +98,5 @@ TAILWIND_APP_NAME = 'theme'
 
 # NPM configuration
 NPM_BIN_PATH = r'C:\Program Files\nodejs\npm.cmd'
+
+

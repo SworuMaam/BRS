@@ -8,10 +8,10 @@ from . import views
 urlpatterns = [
     path('', views.home, name='home'),
     path('about/', views.about, name='about'),
-    path('login/', views.login, name='login'),
     path('search/', views.search, name='search'),  # Search page URL
     path('books/<int:id>/', views.book_detail, name='book_detail'),
     path('genre/fiction/', views.genre_fiction, name='genre_fiction'),
     path('genre/nonfiction/', views.genre_nonfiction, name='genre_nonfiction'),
     path('genre/sci-fi/', views.genre_sci_fi, name='genre_sci_fi'),
+    path('login/', views.login, name='login'),
 ]

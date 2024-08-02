@@ -1,8 +1,10 @@
 from django.shortcuts import render
+from .models import Book
 
 # Create your views here.
 def home(request):
-    return render(request,"book/home.html",{})
+    popular_books = Book.objects.all()  # or apply some filter to get popular books
+    return render(request, 'home.html', {'popular_books': popular_books})
 
 def about(request):
     return render(request,"book/about.html",{})
