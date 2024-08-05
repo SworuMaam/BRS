@@ -4,13 +4,13 @@ from .models import Book
 # Create your views here.
 def home(request):
     popular_books = Book.objects.all()  # or apply some filter to get popular books
-    return render(request, 'home.html', {'popular_books': popular_books})
+    return render(request, 'book/home.html', {'popular_books': popular_books})
 
 def about(request):
     return render(request,"book/about.html",{})
 
 def login(request):
-    return render(request, 'login.html')
+    return render(request, "book/login.html",{})
 
 def search(request):
     query = request.GET.get('query', '')
