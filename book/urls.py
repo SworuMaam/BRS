@@ -13,5 +13,6 @@ urlpatterns = [
     path('genre/fiction/', views.genre_fiction, name='genre_fiction'),
     path('genre/nonfiction/', views.genre_nonfiction, name='genre_nonfiction'),
     path('genre/sci-fi/', views.genre_sci_fi, name='genre_sci_fi'),
-    path('login/', views.login, name='login'),
+    path('SignIn/register/', views.register, name='register'),
+    path('SignTn/login/', views.user_login, name='login'),
 ]
